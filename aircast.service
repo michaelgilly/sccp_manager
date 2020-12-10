@@ -1,0 +1,12 @@
+[Unit]  
+Description=AirCast bridge  
+After=network-online.target  
+Wants=network-online.target  
+
+[Service]  
+ExecStart=/var/lib/airconnect/aircast-arm  
+Restart=on-failure  
+RestartSec=30  
+
+[Install]  
+WantedBy=multi-user.target 
